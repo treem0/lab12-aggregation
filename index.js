@@ -15,7 +15,7 @@ const schema = new mongoose.Schema({
   Title: String,
   Subject: String,
   Actor: String,
-  Acress: String,
+  Actress: String,
   Director: String,
   Popularity: Number
 });

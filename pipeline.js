@@ -45,3 +45,29 @@
     }
   }
 ];
+
+//Sort by actors in how many films
+[
+  {
+    '$group': {
+      '_id': '$Actor', 
+      'actorInMovies': {
+        '$sum': 1
+      }
+    }
+  }, {
+    '$sort': {
+      'actorInMovies': -1
+    }
+  }
+];
+
+//Sort by John Wayne in Comedy Movies
+[
+  {
+    '$match': {
+      'Actor': 'Wayne, John', 
+      'Subject': 'Comedy'
+    }
+  }
+];
